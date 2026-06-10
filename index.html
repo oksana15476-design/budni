@@ -9,10 +9,15 @@
   <meta property="og:title" content="Будни — подбор персонала с оплатой за вышедшего кандидата">
   <meta property="og:description" content="Берём на себя поиск, скрининг, шорт-лист и доведение кандидатов до выхода. Условия и гарантию фиксируем в договоре.">
   <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://oksana15476-design.github.io/budni/">
+  <meta property="og:image" content="https://oksana15476-design.github.io/budni/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://oksana15476-design.github.io/budni/assets/og-image.png">
+  <link rel="canonical" href="https://oksana15476-design.github.io/budni/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23db2777'/%3E%3Ctext x='16' y='23' font-family='Arial, sans-serif' font-size='19' font-weight='800' fill='%23fff' text-anchor='middle'%3E%D0%91%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/golos.css">
   <link rel="stylesheet" href="css/styles.css">
   <script type="application/ld+json">
   {
@@ -104,8 +109,20 @@
       <div class="header-cta">
         <a class="header-link" href="#contact">Связаться</a>
         <a class="btn btn-primary" href="#contact">Оценить вакансию</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="#pains">Когда к нам</a>
+      <a href="#services">Услуги</a>
+      <a href="#pricing">Стоимость</a>
+      <a href="#calculator">Калькулятор</a>
+      <a href="#guarantees">Гарантии</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Связаться</a>
+    </nav>
   </header>
 
   <!-- ===== Hero ===== -->
@@ -124,6 +141,7 @@
           <div class="hero-point"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Массовый и точечный подбор</div>
           <div class="hero-point"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Оплата за вышедшего кандидата</div>
           <div class="hero-point"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Гарантийная замена по договору</div>
+          <div class="hero-point"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Первые кандидаты — через 3–5 дней</div>
         </div>
       </div>
       <div class="dash reveal" aria-hidden="true">
@@ -242,7 +260,7 @@
         </div>
       </div>
       <div class="section-cta reveal">
-        <a class="btn btn-primary btn-lg" href="#contact">Узнать, закрываем ли вашу вакансию</a>
+        <a class="btn btn-primary btn-lg" href="#contact">Получить оценку вакансии</a>
       </div>
     </div>
   </section>
@@ -308,7 +326,7 @@
       <div class="section-head reveal">
         <div class="section-kicker">Быстрая оценка</div>
         <h2 class="section-title">Рассчитайте сложность подбора за 1 минуту</h2>
-        <p class="section-sub">5 коротких вопросов — в ответ пришлём оценку сложности, сроков и стоимости.</p>
+        <p class="section-sub">5 коротких вопросов и контакты — в ответ пришлём оценку сложности, сроков и стоимости.</p>
       </div>
       <div class="quiz-card reveal" id="quiz-card">
         <div class="quiz-main">
@@ -371,6 +389,7 @@
             </div>
             <form class="contact-form" data-quiz-step="5" id="quiz-form" hidden>
               <div class="quiz-q">Куда отправить оценку?</div>
+              <div class="hp-field" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
               <div class="form-row">
                 <div class="field">
                   <label for="qz-name">Имя</label>
@@ -523,7 +542,7 @@
         </div>
       </div>
       <div class="section-cta reveal">
-        <a class="btn btn-primary btn-lg" href="#contact">Получить стоимость под мою вакансию</a>
+        <a class="btn btn-primary btn-lg" href="#contact">Получить оценку вакансии</a>
       </div>
     </div>
   </section>
@@ -556,7 +575,7 @@
           <div class="price-note">Для ключевых управленческих и закрытых позиций.</div>
         </div>
       </div>
-      <p class="price-disclaimer reveal">Точная стоимость фиксируется после брифа. Если вакансия не закрываемая на текущих условиях — скажем до старта.</p>
+      <p class="price-disclaimer reveal">Точная стоимость фиксируется после брифа. Если вакансию не закрыть на текущих условиях — скажем до старта.</p>
       <div class="section-cta reveal">
         <a class="btn btn-ghost btn-lg" href="#calculator">Рассчитать стоимость</a>
       </div>
@@ -568,7 +587,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="section-kicker">Калькулятор</div>
-        <h2 class="section-title">Прикиньте бюджет подбора за 10 секунд</h2>
+        <h2 class="section-title">Рассчитайте бюджет подбора за 10 секунд</h2>
       </div>
       <div class="calc-card reveal" id="calc-card">
         <div class="calc-controls">
@@ -621,11 +640,12 @@
             <button type="button" class="btn btn-on-dark" id="calc-cta">Получить точный расчёт и план поиска</button>
             <form class="calc-form" id="calc-form" hidden>
               <div class="calc-form-summary">Вы выбрали: <b id="calc-summary"></b></div>
+              <div class="hp-field" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
               <input type="text" name="name" placeholder="Имя" required aria-label="Имя">
               <input type="text" name="contact" placeholder="Телефон или Telegram" required aria-label="Телефон или Telegram">
               <input type="text" name="company" placeholder="Компания" aria-label="Компания">
               <button type="submit" class="btn btn-on-dark">Получить точный расчёт и план поиска</button>
-              <span class="form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</span>
+              <span class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</span>
             </form>
           </div>
           <div class="form-success calc-success" id="calc-success" hidden>
@@ -701,7 +721,7 @@
       </div>
       <p class="cost-final reveal">Агентство выгодно, когда цена незакрытой вакансии выше стоимости подбора.</p>
       <div class="section-cta reveal">
-        <a class="btn btn-primary btn-lg" href="#contact">Проверить, выгодно ли подключать агентство</a>
+        <a class="btn btn-primary btn-lg" href="#contact">Получить оценку вакансии</a>
       </div>
     </div>
   </section>
@@ -763,11 +783,11 @@
     <div class="wrap filter-grid">
       <div class="reveal">
         <div class="section-kicker">Честный фильтр</div>
-        <h2 class="section-title">Сначала проверяем, закрываема ли вакансия</h2>
+        <h2 class="section-title">Сначала проверяем, можно ли закрыть вакансию</h2>
         <p class="section-sub">Мы не берём задачи, которые нельзя закрыть честно: зарплата сильно ниже рынка, нереалистичные требования, отсутствие ответственного лица или обратной связи.</p>
         <p class="filter-note">Если видим риск — говорим до старта, а не после месяца поиска.</p>
         <div style="margin-top: 26px">
-          <a class="btn btn-primary btn-lg" href="#contact">Понять, закрываема ли моя вакансия</a>
+          <a class="btn btn-primary btn-lg" href="#contact">Получить оценку вакансии</a>
         </div>
       </div>
       <div class="filter-check reveal" aria-hidden="true">
@@ -947,13 +967,6 @@
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            Что если кандидат не выйдет?
-            <svg class="faq-chevron" width="18" height="18" aria-hidden="true"><use href="#i-chevron"/></svg>
-          </button>
-          <div class="faq-a"><div class="faq-a-in">Сопровождаем кандидата до первого рабочего дня и держим связь после оффера. Если выход сорвался — продолжаем поиск, условия замены зафиксированы в договоре.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
             С кем заключается договор?
             <svg class="faq-chevron" width="18" height="18" aria-hidden="true"><use href="#i-chevron"/></svg>
           </button>
@@ -984,6 +997,7 @@
           </div>
           <div class="cta-form-wrap">
             <form class="contact-form" id="lead-form">
+              <div class="hp-field" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
               <div class="form-row">
                 <div class="field">
                   <label for="f-name">Имя</label>
@@ -1023,7 +1037,7 @@
                 <textarea id="f-comment" name="comment" placeholder="График, регион, особые требования"></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-lg btn-block">Получить оценку вакансии</button>
-              <span class="form-note">Без обязательств. Если задача не наша — скажем сразу. Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</span>
+              <span class="form-note">Без обязательств. Если задача не наша — скажем сразу. Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</span>
             </form>
             <div class="form-success" id="lead-success" hidden>
               <div class="success-icon"><svg width="46" height="46" aria-hidden="true"><use href="#i-check-circle"/></svg></div>
@@ -1062,7 +1076,7 @@
           <ul>
             <li><a href="#contact">Оставить заявку</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Политика обработки персональных данных</a></li>
+            <li><a href="privacy.html">Политика обработки персональных данных</a></li>
           </ul>
         </div>
       </div>
@@ -1076,7 +1090,6 @@
   <!-- ===== Sticky mobile CTA ===== -->
   <div class="sticky-cta">
     <a class="btn btn-primary" href="#contact">Оценить вакансию</a>
-    <a class="btn btn-ghost" href="#contact">Написать</a>
   </div>
 
 </body>

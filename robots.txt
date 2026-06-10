@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oksana15476-design.github.io/budni/sitemap.xml

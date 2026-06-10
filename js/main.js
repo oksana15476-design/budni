@@ -1,22 +1,101 @@
-/* Будни — landing interactivity: reveal-on-scroll, FAQ, quiz, calculator, lead forms. */
+/* Будни — landing interactivity: leads, analytics, reveal, FAQ, quiz, calculator, mobile nav. */
 (function () {
   'use strict';
 
+  /* =====================================================================
+   * НАСТРОЙКА — заполните и заявки/аналитика заработают.
+   *
+   * 1) Куда отправлять заявки (достаточно одного варианта):
+   *    LEAD_ENDPOINT — URL, принимающий POST с JSON (Formspree, Make,
+   *    n8n, свой бэкенд): LEAD_ENDPOINT: 'https://formspree.io/f/XXXXXX'
+   *    TELEGRAM — отправка сообщением в Telegram-чат через бота:
+   *    TELEGRAM: { botToken: '123456:AA...', chatId: '-100123456789' }
+   *    ВАЖНО: токен бота в статике виден всем — заведите отдельного
+   *    бота только для приёма заявок, ничего больше ему не поручайте.
+   *
+   * 2) METRIKA_ID — номер счётчика Яндекс.Метрики (число). Цели на
+   *    отправку форм: lead_quiz, lead_calculator, lead_contact.
+   * ===================================================================== */
+  var CONFIG = {
+    LEAD_ENDPOINT: '',
+    TELEGRAM: { botToken: '', chatId: '' },
+    METRIKA_ID: null
+  };
+
   var fmt = function (n) { return n.toLocaleString('ru-RU'); };
 
-  /*
-   * Forms currently show a success state without sending data anywhere.
-   * Wire this up to a real receiver (CRM, Telegram bot, email service)
-   * before driving paid traffic to the page.
-   */
+  /* ---------- Lead delivery ---------- */
+  function leadToText(kind, data) {
+    var lines = ['Новая заявка с сайта «Будни»', 'Источник: ' + kind, ''];
+    Object.keys(data).forEach(function (k) {
+      if (data[k]) lines.push(k + ': ' + data[k]);
+    });
+    lines.push('', 'Страница: ' + location.href);
+    return lines.join('\n');
+  }
+
   function submitLead(kind, data) {
-    console.info('[lead:' + kind + ']', data);
+    if (data.website) return; // honeypot — silently drop bot submissions
+    delete data.website;
+
+    if (window.ym && CONFIG.METRIKA_ID) {
+      try { window.ym(CONFIG.METRIKA_ID, 'reachGoal', 'lead_' + kind); } catch (e) {}
+    }
+
+    if (CONFIG.LEAD_ENDPOINT) {
+      fetch(CONFIG.LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ source: kind, page: location.href, fields: data }),
+        keepalive: true
+      }).catch(function (e) { console.warn('[lead] endpoint error', e); });
+    } else if (CONFIG.TELEGRAM.botToken && CONFIG.TELEGRAM.chatId) {
+      fetch('https://api.telegram.org/bot' + CONFIG.TELEGRAM.botToken + '/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: CONFIG.TELEGRAM.chatId, text: leadToText(kind, data) }),
+        keepalive: true
+      }).catch(function (e) { console.warn('[lead] telegram error', e); });
+    } else {
+      console.info('[lead] получена заявка, но приёмник не настроен (см. CONFIG в js/main.js)', kind, data);
+    }
   }
 
   function formData(form) {
     var data = {};
-    new FormData(form).forEach(function (value, key) { data[key] = value; });
+    new FormData(form).forEach(function (value, key) { data[key] = String(value).trim(); });
     return data;
+  }
+
+  /* ---------- Yandex.Metrika ---------- */
+  function initMetrika() {
+    if (!CONFIG.METRIKA_ID) return;
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t); a = e.getElementsByTagName(t)[0];
+      k.async = 1; k.src = r; a.parentNode.insertBefore(k, a);
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+    window.ym(CONFIG.METRIKA_ID, 'init', {
+      clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: false
+    });
+  }
+
+  /* ---------- Mobile nav ---------- */
+  function initMobileNav() {
+    var toggle = document.getElementById('nav-toggle');
+    var panel = document.getElementById('mobile-nav');
+    if (!toggle || !panel) return;
+    toggle.addEventListener('click', function () {
+      var open = panel.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    panel.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   /* ---------- Reveal on scroll ---------- */
@@ -239,6 +318,8 @@
     });
   }
 
+  initMetrika();
+  initMobileNav();
   initReveal();
   initFaq();
   initQuiz();
