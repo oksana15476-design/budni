@@ -88,11 +88,13 @@
     if (!toggle || !panel) return;
     toggle.addEventListener('click', function () {
       var open = panel.classList.toggle('open');
+      panel.hidden = !open;
       toggle.setAttribute('aria-expanded', String(open));
     });
     panel.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
         panel.classList.remove('open');
+        panel.hidden = true;
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
