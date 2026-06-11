@@ -81,6 +81,15 @@
     });
   }
 
+  /* ---------- Header shadow on scroll ---------- */
+  function initHeaderShadow() {
+    var header = document.querySelector('.header');
+    if (!header) return;
+    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   /* ---------- Mobile nav ---------- */
   function initMobileNav() {
     var toggle = document.getElementById('nav-toggle');
@@ -247,6 +256,8 @@
     function update() {
       var count = Number(countInput.value);
       var salary = Number(salaryInput.value);
+      countInput.style.setProperty('--fill', ((count - 3) / (60 - 3) * 100) + '%');
+      salaryInput.style.setProperty('--fill', ((salary - 80) / (600 - 80) * 100) + '%');
       if (mode === 'mass') {
         priceEl.textContent = 'от ' + fmt(PER * count) + ' ₽';
         countVal.textContent = count + ' чел.';
@@ -321,6 +332,7 @@
   }
 
   initMetrika();
+  initHeaderShadow();
   initMobileNav();
   initReveal();
   initFaq();

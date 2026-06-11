@@ -17,8 +17,8 @@
   <meta name="twitter:image" content="https://oksana15476-design.github.io/budni/assets/og-image.png">
   <link rel="canonical" href="https://oksana15476-design.github.io/budni/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23db2777'/%3E%3Ctext x='16' y='23' font-family='Arial, sans-serif' font-size='19' font-weight='800' fill='%23fff' text-anchor='middle'%3E%D0%91%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="fonts/golos.css?v=6">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="fonts/golos.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=7">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,7 +56,7 @@
     ]
   }
   </script>
-  <script src="js/main.js?v=6" defer></script>
+  <script src="js/main.js?v=7" defer></script>
 </head>
 <body>
 
@@ -88,6 +88,15 @@
     </symbol>
     <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line>
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle>
+    </symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
     </symbol>
   </svg>
 
@@ -129,19 +138,27 @@
   <section class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
-        <div class="hero-kicker">Массовый и точечный подбор для бизнеса</div>
+        <div class="hero-kicker">Кадровое агентство для бизнеса</div>
         <h1>Подбор персонала с моделью оплаты <em>за вышедшего кандидата</em></h1>
         <p class="hero-sub">Берём на себя поиск, первичный скрининг, шорт-лист и доведение кандидатов до выхода. Работаем с массовым и точечным подбором, условия и гарантию фиксируем в договоре.</p>
         <div class="hero-actions">
           <a class="btn btn-primary btn-lg" href="#contact">Оценить мою вакансию</a>
           <a class="btn btn-ghost btn-lg" href="#calculator">Рассчитать стоимость</a>
         </div>
-        <p class="hero-micro">После заявки получите ориентир по срокам, стоимости и сложности закрытия вакансии.</p>
-        <div class="hero-points">
-          <div class="hero-point"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Массовый и точечный подбор</div>
-          <div class="hero-point"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Оплата за вышедшего кандидата</div>
-          <div class="hero-point"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Гарантийная замена по договору</div>
-          <div class="hero-point"><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Первые кандидаты — через 3–5 дней</div>
+        <p class="hero-micro">Ответим в течение рабочего дня: ориентир по срокам, стоимости и сложности закрытия.</p>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <span class="hero-trust-num">3–5 дней</span>
+            <span class="hero-trust-label">до первых кандидатов</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-num">3 формата</span>
+            <span class="hero-trust-label">массовый · точечный · executive</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-num">В договоре</span>
+            <span class="hero-trust-label">сроки, оплата за выход, замена</span>
+          </div>
         </div>
       </div>
       <div class="dash reveal" aria-hidden="true">
@@ -320,12 +337,207 @@
     </div>
   </section>
 
-  <!-- ===== Quiz ===== -->
-  <section class="section section-surface" id="quiz">
+  <!-- ===== Services ===== -->
+  <section class="section section-surface" id="services">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="section-kicker">Быстрая оценка</div>
-        <h2 class="section-title">Рассчитайте сложность подбора за 1 минуту</h2>
+        <div class="section-kicker">Услуги</div>
+        <h2 class="section-title">Три формата: от потока линейного персонала до закрытого поиска руководителей</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card reveal">
+          <div class="svc-icon tint-a"><svg width="26" height="26" aria-hidden="true"><use href="#i-users"/></svg></div>
+          <h3>Массовый подбор</h3>
+          <div class="svc-for"><b>Для:</b> склады, производство, розница, колл-центры, линейный персонал</div>
+          <ul class="svc-list">
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Запускаем поток кандидатов</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Проводим первичный скрининг</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Организуем интервью</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Контролируем выход</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Даём отчётность по воронке</li>
+          </ul>
+          <div class="svc-meta">
+            <div class="svc-meta-item">
+              <span class="svc-meta-num">от 45 000 ₽</span>
+              <span class="svc-meta-label">за вышедшего сотрудника</span>
+            </div>
+          </div>
+          <a class="btn btn-ghost" href="#contact">Обсудить массовый подбор</a>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon tint-b"><svg width="26" height="26" aria-hidden="true"><use href="#i-target"/></svg></div>
+          <h3>Точечный подбор</h3>
+          <div class="svc-for"><b>Для:</b> специалисты, продажи, офисные роли, финансы, операционные роли, IT</div>
+          <ul class="svc-list">
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Уточняем профиль</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Ищем не только среди откликов</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Проводим интервью по мотивации и опыту</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Передаём шорт-лист</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Сопровождаем оффер</li>
+          </ul>
+          <div class="svc-meta">
+            <div class="svc-meta-item">
+              <span class="svc-meta-num">12–15%</span>
+              <span class="svc-meta-label">годового дохода</span>
+            </div>
+          </div>
+          <a class="btn btn-ghost" href="#contact">Обсудить точечный подбор</a>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon tint-c"><svg width="26" height="26" aria-hidden="true"><use href="#i-compass"/></svg></div>
+          <h3>Executive search</h3>
+          <div class="svc-for"><b>Для:</b> руководители, ключевые сотрудники, закрытые позиции</div>
+          <ul class="svc-list">
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Строим карту рынка</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Выходим напрямую</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Проверяем мотивацию перехода</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Сопровождаем переговоры</li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Помогаем снизить риск ошибки</li>
+          </ul>
+          <div class="svc-meta">
+            <div class="svc-meta-item">
+              <span class="svc-meta-num">от 18%</span>
+              <span class="svc-meta-label">индивидуальные условия</span>
+            </div>
+          </div>
+          <a class="btn btn-ghost" href="#contact">Обсудить executive search</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pricing ===== -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-kicker">Стоимость</div>
+        <h2 class="section-title">Стоимость зависит от сложности вакансии, но логика прозрачна</h2>
+      </div>
+      <div class="price-grid">
+        <div class="price-card reveal">
+          <div class="price-name">Массовый подбор</div>
+          <div class="price-num">от 45 000 ₽</div>
+          <div class="price-unit">за вышедшего сотрудника</div>
+          <ul class="price-points">
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Поток кандидатов и первичный скрининг</li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Организация интервью и контроль выхода</li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Отчётность по воронке найма</li>
+          </ul>
+          <div class="price-note">Для линейных и потоковых ролей. Ставка зависит от количества позиций, региона, графика и требований.</div>
+        </div>
+        <div class="price-card reveal featured">
+          <span class="price-badge">Чаще всего</span>
+          <div class="price-name">Точечный подбор</div>
+          <div class="price-num">12–15%</div>
+          <div class="price-unit">годового дохода</div>
+          <ul class="price-points">
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Поиск не только среди откликов</li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Шорт-лист с комментариями рекрутёра</li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Сопровождение оффера и выхода</li>
+          </ul>
+          <div class="price-note">Для специалистов и руководителей среднего уровня.</div>
+        </div>
+        <div class="price-card reveal">
+          <div class="price-name">Executive search</div>
+          <div class="price-num">индивидуально</div>
+          <div class="price-unit">обычно от 18% годового дохода</div>
+          <ul class="price-points">
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Карта рынка и прямой выход на кандидатов</li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Полная конфиденциальность сторон</li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Расширенная гарантия замены — по договору</li>
+          </ul>
+          <div class="price-note">Для ключевых управленческих и закрытых позиций.</div>
+        </div>
+      </div>
+      <p class="price-disclaimer reveal">Точная стоимость фиксируется после брифа. Если вакансию не закрыть на текущих условиях — скажем до старта.</p>
+      <div class="section-cta reveal">
+        <a class="btn btn-ghost btn-lg" href="#calculator">Рассчитать стоимость</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Calculator ===== -->
+  <section class="section section-surface" id="calculator">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-kicker">Калькулятор</div>
+        <h2 class="section-title">Рассчитайте бюджет подбора за 10 секунд</h2>
+      </div>
+      <div class="calc-card reveal" id="calc-card">
+        <div class="calc-controls">
+          <div class="mode-switch" role="tablist" aria-label="Формат подбора">
+            <button type="button" role="tab" aria-selected="true" class="active" data-calc-mode="mass">Массовый подбор</button>
+            <button type="button" role="tab" aria-selected="false" data-calc-mode="targeted">Точечный подбор</button>
+          </div>
+          <div class="calc-range" id="calc-range-mass">
+            <div class="calc-range-head">
+              <label for="c4-count">Сколько сотрудников нужно нанять</label>
+              <span class="calc-range-val" id="calc-count-val">10 чел.</span>
+            </div>
+            <input id="c4-count" type="range" min="3" max="60" step="1" value="10">
+            <span class="calc-hint">Ставка от 45 000 ₽ за вышедшего сотрудника. Зависит от количества позиций, региона, графика и требований.</span>
+          </div>
+          <div class="calc-range" id="calc-range-targeted" hidden>
+            <div class="calc-range-head">
+              <label for="c4-salary">Месячный доход специалиста</label>
+              <span class="calc-range-val" id="calc-salary-val">150 000 ₽</span>
+            </div>
+            <input id="c4-salary" type="range" min="80" max="600" step="10" value="150">
+            <span class="calc-hint">Комиссия обычно 12–15% годового дохода. Executive search — индивидуально, от 18%.</span>
+          </div>
+          <div class="calc-includes">
+            <div class="calc-includes-title">Что входит в расчёт</div>
+            <ul>
+              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Поиск и первичный контакт с кандидатами</li>
+              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Скрининг опыта и мотивации</li>
+              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Шорт-лист с комментариями</li>
+              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Сопровождение оффера и контроль выхода</li>
+              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Гарантийная замена по договору</li>
+            </ul>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div class="calc-main" id="calc-main">
+            <div class="calc-result-label">Ориентир бюджета</div>
+            <div class="calc-price" id="calc-price">от 450 000 ₽</div>
+            <div id="calc-lines-mass">
+              <div class="calc-line"><span>Ставка за вышедшего</span><strong>от 45 000 ₽</strong></div>
+              <div class="calc-line"><span>Позиций</span><strong id="calc-line-count">10</strong></div>
+              <div class="calc-line"><span>Оплата</span><strong>за вышедшего сотрудника</strong></div>
+            </div>
+            <div id="calc-lines-targeted" hidden>
+              <div class="calc-line"><span>Годовой доход</span><strong id="calc-line-annual">1 800 000 ₽</strong></div>
+              <div class="calc-line"><span>Комиссия</span><strong>12–15%</strong></div>
+              <div class="calc-line"><span>Гарантия замены</span><strong>по договору</strong></div>
+            </div>
+            <p class="calc-note">Расчёт предварительный. Точная стоимость фиксируется после брифа.</p>
+            <button type="button" class="btn btn-on-dark" id="calc-cta">Получить точный расчёт и план поиска</button>
+            <form class="calc-form" id="calc-form" hidden>
+              <div class="calc-form-summary">Вы выбрали: <b id="calc-summary"></b></div>
+              <div class="hp-field" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+              <input type="text" name="name" placeholder="Имя" required aria-label="Имя">
+              <input type="text" name="contact" placeholder="Телефон или Telegram" required aria-label="Телефон или Telegram">
+              <input type="text" name="company" placeholder="Компания" aria-label="Компания">
+              <button type="submit" class="btn btn-on-dark">Получить точный расчёт и план поиска</button>
+              <span class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</span>
+            </form>
+          </div>
+          <div class="form-success calc-success" id="calc-success" hidden>
+            <div class="success-icon"><svg width="42" height="42" aria-hidden="true"><use href="#i-check-circle"/></svg></div>
+            <h3>Заявка отправлена</h3>
+            <p>Вернёмся с точным расчётом и планом поиска в течение рабочего дня.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quiz ===== -->
+  <section class="section" id="quiz">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-kicker">Остался шаг</div>
+        <h2 class="section-title">Получите оценку сложности подбора за 1 минуту</h2>
         <p class="section-sub">5 коротких вопросов и контакты — в ответ пришлём оценку сложности, сроков и стоимости.</p>
       </div>
       <div class="quiz-card reveal" id="quiz-card">
@@ -416,7 +628,7 @@
           <div class="form-success" id="quiz-success" hidden>
             <div class="success-icon"><svg width="46" height="46" aria-hidden="true"><use href="#i-check-circle"/></svg></div>
             <h3>Заявка отправлена</h3>
-            <p>Ответим с ориентиром по срокам, стоимости и рискам закрытия.</p>
+            <p>Ответим в течение рабочего дня — с ориентиром по срокам, стоимости и рискам закрытия.</p>
             <button type="button" class="btn btn-ghost" id="quiz-restart">Пройти ещё раз</button>
           </div>
         </div>
@@ -449,221 +661,13 @@
     </div>
   </section>
 
-  <!-- ===== Services ===== -->
-  <section class="section" id="services">
+  <!-- ===== Economics ===== -->
+  <section class="section section-surface" id="economics">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="section-kicker">Услуги</div>
-        <h2 class="section-title">Закрываем подбор под разные задачи бизнеса</h2>
-      </div>
-      <div class="svc-grid">
-        <div class="svc-card reveal">
-          <h3>Массовый подбор</h3>
-          <div class="svc-for"><b>Для:</b> склады, производство, розница, колл-центры, линейный персонал</div>
-          <ul class="svc-list">
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Запускаем поток кандидатов</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Проводим первичный скрининг</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Организуем интервью</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Контролируем выход</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Даём отчётность по воронке</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contact">Обсудить массовый подбор</a>
-        </div>
-        <div class="svc-card reveal">
-          <h3>Точечный подбор</h3>
-          <div class="svc-for"><b>Для:</b> специалисты, продажи, офисные роли, финансы, операционные роли, IT</div>
-          <ul class="svc-list">
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Уточняем профиль</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Ищем не только среди откликов</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Проводим интервью по мотивации и опыту</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Передаём шорт-лист</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Сопровождаем оффер</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contact">Обсудить точечный подбор</a>
-        </div>
-        <div class="svc-card reveal">
-          <h3>Executive search</h3>
-          <div class="svc-for"><b>Для:</b> руководители, ключевые сотрудники, закрытые позиции</div>
-          <ul class="svc-list">
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Строим карту рынка</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Выходим напрямую</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Проверяем мотивацию перехода</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Сопровождаем переговоры</li>
-            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Помогаем снизить риск ошибки</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contact">Обсудить executive search</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Chain ===== -->
-  <section class="section section-surface" id="included">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="section-kicker">Что входит в стоимость</div>
-        <h2 class="section-title">Вы платите не за резюме, а за работу до выхода кандидата</h2>
-      </div>
-      <div class="chain reveal">
-        <div class="chain-step">
-          <div class="chain-num">01</div>
-          <h5>Бриф</h5>
-          <p>профиль кандидата</p>
-        </div>
-        <div class="chain-step">
-          <div class="chain-num">02</div>
-          <h5>Поиск</h5>
-          <p>каналы и старт воронки</p>
-        </div>
-        <div class="chain-step">
-          <div class="chain-num">03</div>
-          <h5>Скрининг</h5>
-          <p>первичный фильтр</p>
-        </div>
-        <div class="chain-step">
-          <div class="chain-num">04</div>
-          <h5>Шорт-лист</h5>
-          <p>релевантные кандидаты</p>
-        </div>
-        <div class="chain-step">
-          <div class="chain-num">05</div>
-          <h5>Оффер</h5>
-          <p>согласованные условия</p>
-        </div>
-        <div class="chain-step">
-          <div class="chain-num">06</div>
-          <h5>Выход</h5>
-          <p>первый рабочий день</p>
-        </div>
-        <div class="chain-step">
-          <div class="chain-num">07</div>
-          <h5>Гарантия</h5>
-          <p>замена по договору</p>
-        </div>
-      </div>
-      <div class="section-cta reveal">
-        <a class="btn btn-primary btn-lg" href="#contact">Получить оценку вакансии</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Pricing ===== -->
-  <section class="section" id="pricing">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="section-kicker">Стоимость</div>
-        <h2 class="section-title">Стоимость зависит от сложности вакансии, но логика прозрачна</h2>
-      </div>
-      <div class="price-grid">
-        <div class="price-card reveal">
-          <div class="price-name">Массовый подбор</div>
-          <div class="price-num">от 45 000 ₽</div>
-          <div class="price-unit">за вышедшего сотрудника</div>
-          <div class="price-note">Для линейных и потоковых ролей. Ставка зависит от количества позиций, региона, графика и требований.</div>
-        </div>
-        <div class="price-card reveal featured">
-          <span class="price-badge">Чаще всего</span>
-          <div class="price-name">Точечный подбор</div>
-          <div class="price-num">12–15%</div>
-          <div class="price-unit">годового дохода</div>
-          <div class="price-note">Для специалистов и руководителей среднего уровня.</div>
-        </div>
-        <div class="price-card reveal">
-          <div class="price-name">Executive search</div>
-          <div class="price-num">индивидуально</div>
-          <div class="price-unit">обычно от 18% годового дохода</div>
-          <div class="price-note">Для ключевых управленческих и закрытых позиций.</div>
-        </div>
-      </div>
-      <p class="price-disclaimer reveal">Точная стоимость фиксируется после брифа. Если вакансию не закрыть на текущих условиях — скажем до старта.</p>
-      <div class="section-cta reveal">
-        <a class="btn btn-ghost btn-lg" href="#calculator">Рассчитать стоимость</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Calculator ===== -->
-  <section class="section section-surface" id="calculator">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="section-kicker">Калькулятор</div>
-        <h2 class="section-title">Рассчитайте бюджет подбора за 10 секунд</h2>
-      </div>
-      <div class="calc-card reveal" id="calc-card">
-        <div class="calc-controls">
-          <div class="mode-switch" role="tablist" aria-label="Формат подбора">
-            <button type="button" role="tab" aria-selected="true" class="active" data-calc-mode="mass">Массовый подбор</button>
-            <button type="button" role="tab" aria-selected="false" data-calc-mode="targeted">Точечный подбор</button>
-          </div>
-          <div class="calc-range" id="calc-range-mass">
-            <div class="calc-range-head">
-              <label for="c4-count">Сколько сотрудников нужно нанять</label>
-              <span class="calc-range-val" id="calc-count-val">10 чел.</span>
-            </div>
-            <input id="c4-count" type="range" min="3" max="60" step="1" value="10">
-            <span class="calc-hint">Ставка от 45 000 ₽ за вышедшего сотрудника. Зависит от количества позиций, региона, графика и требований.</span>
-          </div>
-          <div class="calc-range" id="calc-range-targeted" hidden>
-            <div class="calc-range-head">
-              <label for="c4-salary">Месячный доход специалиста</label>
-              <span class="calc-range-val" id="calc-salary-val">150 000 ₽</span>
-            </div>
-            <input id="c4-salary" type="range" min="80" max="600" step="10" value="150">
-            <span class="calc-hint">Комиссия обычно 12–15% годового дохода. Executive search — индивидуально, от 18%.</span>
-          </div>
-          <div class="calc-includes">
-            <div class="calc-includes-title">Что входит в расчёт</div>
-            <ul>
-              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Поиск и первичный контакт с кандидатами</li>
-              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Скрининг опыта и мотивации</li>
-              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Шорт-лист с комментариями</li>
-              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Сопровождение оффера и контроль выхода</li>
-              <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg>Гарантийная замена по договору</li>
-            </ul>
-          </div>
-        </div>
-        <div class="calc-result">
-          <div class="calc-main" id="calc-main">
-            <div class="calc-result-label">Ориентир бюджета</div>
-            <div class="calc-price" id="calc-price">от 450 000 ₽</div>
-            <div id="calc-lines-mass">
-              <div class="calc-line"><span>Ставка за вышедшего</span><strong>от 45 000 ₽</strong></div>
-              <div class="calc-line"><span>Позиций</span><strong id="calc-line-count">10</strong></div>
-              <div class="calc-line"><span>Оплата</span><strong>за вышедшего сотрудника</strong></div>
-            </div>
-            <div id="calc-lines-targeted" hidden>
-              <div class="calc-line"><span>Годовой доход</span><strong id="calc-line-annual">1 800 000 ₽</strong></div>
-              <div class="calc-line"><span>Комиссия</span><strong>12–15%</strong></div>
-              <div class="calc-line"><span>Гарантия замены</span><strong>по договору</strong></div>
-            </div>
-            <p class="calc-note">Расчёт предварительный. Точная стоимость фиксируется после брифа.</p>
-            <button type="button" class="btn btn-on-dark" id="calc-cta">Получить точный расчёт и план поиска</button>
-            <form class="calc-form" id="calc-form" hidden>
-              <div class="calc-form-summary">Вы выбрали: <b id="calc-summary"></b></div>
-              <div class="hp-field" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-              <input type="text" name="name" placeholder="Имя" required aria-label="Имя">
-              <input type="text" name="contact" placeholder="Телефон или Telegram" required aria-label="Телефон или Telegram">
-              <input type="text" name="company" placeholder="Компания" aria-label="Компания">
-              <button type="submit" class="btn btn-on-dark">Получить точный расчёт и план поиска</button>
-              <span class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</span>
-            </form>
-          </div>
-          <div class="form-success calc-success" id="calc-success" hidden>
-            <div class="success-icon"><svg width="42" height="42" aria-hidden="true"><use href="#i-check-circle"/></svg></div>
-            <h3>Заявка отправлена</h3>
-            <p>Вернёмся с точным расчётом и планом поиска.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Before / After ===== -->
-  <section class="section" id="before-after">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="section-kicker">До и после</div>
-        <h2 class="section-title">Чем управляемый подбор отличается от хаотичного</h2>
+        <div class="section-kicker">Экономика найма</div>
+        <h2 class="section-title">Сколько стоит ничего не делать</h2>
+        <p class="section-sub">Незакрытая вакансия списывает деньги каждый день — даже если этого не видно в бюджете.</p>
       </div>
       <div class="ba-grid">
         <div class="ba-col before reveal">
@@ -687,42 +691,14 @@
           </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== Why costly ===== -->
-  <section class="section section-surface" id="why-costly">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="section-kicker">Экономика найма</div>
-        <h2 class="section-title">Внутренний подбор тоже стоит денег — даже если вы этого не видите</h2>
-      </div>
-      <div class="cost-grid">
-        <div class="cost-card reveal">
-          <b>Время HR</b>
-          на нерелевантные отклики и прозвон
-        </div>
-        <div class="cost-card reveal">
-          <b>Время руководителя</b>
-          на собеседования со слабыми кандидатами
-        </div>
-        <div class="cost-card reveal">
-          <b>Простой отдела</b>
-          без нужного сотрудника
-        </div>
-        <div class="cost-card reveal">
-          <b>Потерянные деньги</b>
-          продажи, смены, производительность
-        </div>
-        <div class="cost-card reveal">
-          <b>Повторный поиск</b>
-          после невыхода кандидата
-        </div>
+      <div class="cost-line reveal">
+        <div class="cost-item"><b>Время HR</b><span>нерелевантные отклики и прозвон</span></div>
+        <div class="cost-item"><b>Время руководителя</b><span>интервью со слабыми кандидатами</span></div>
+        <div class="cost-item"><b>Простой отдела</b><span>без нужного сотрудника</span></div>
+        <div class="cost-item"><b>Потерянные деньги</b><span>продажи, смены, производительность</span></div>
+        <div class="cost-item"><b>Повторный поиск</b><span>после невыхода кандидата</span></div>
       </div>
       <p class="cost-final reveal">Агентство выгодно, когда цена незакрытой вакансии выше стоимости подбора.</p>
-      <div class="section-cta reveal">
-        <a class="btn btn-primary btn-lg" href="#contact">Получить оценку вакансии</a>
-      </div>
     </div>
   </section>
 
@@ -731,7 +707,8 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="section-kicker">Как работаем</div>
-        <h2 class="section-title">Пять этапов — каждый с конкретным результатом</h2>
+        <h2 class="section-title">Вы платите не за резюме, а за работу до выхода кандидата</h2>
+        <p class="section-sub">Пять этапов — каждый с конкретным результатом.</p>
       </div>
       <div class="steps">
         <div class="step reveal">
@@ -827,7 +804,7 @@
   </section>
 
   <!-- ===== Guarantees ===== -->
-  <section class="section" id="guarantees">
+  <section class="section section-dark" id="guarantees">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="section-kicker">Гарантии</div>
@@ -874,7 +851,7 @@
   </section>
 
   <!-- ===== Objections ===== -->
-  <section class="section section-surface" id="objections">
+  <section class="section" id="objections">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="section-kicker">Сомнения</div>
@@ -893,16 +870,12 @@
           <div class="obj-q">«Дорого»</div>
           <div class="obj-a">Сравните стоимость подбора со стоимостью незакрытой вакансии, простоем отдела и временем руководителя.</div>
         </div>
-        <div class="obj-card reveal">
-          <div class="obj-q">«Нам уже обещали кандидатов»</div>
-          <div class="obj-a">Мы не продаём обещание. Сначала оцениваем вакансию, рынок и условия, потом предлагаем план.</div>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== FAQ ===== -->
-  <section class="section" id="faq">
+  <section class="section section-surface" id="faq">
     <div class="wrap">
       <div class="section-head centered reveal">
         <div class="section-kicker">FAQ</div>
@@ -1008,41 +981,21 @@
                   <input id="f-phone" name="phone" type="text" placeholder="+7 ___ ___-__-__" required>
                 </div>
               </div>
-              <div class="form-row">
-                <div class="field">
-                  <label for="f-company">Компания</label>
-                  <input id="f-company" name="company" type="text" placeholder="Название компании">
-                </div>
-                <div class="field">
-                  <label for="f-city">Город</label>
-                  <input id="f-city" name="city" type="text" placeholder="Москва">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="field">
-                  <label for="f-who">Кого нужно нанять</label>
-                  <input id="f-who" name="who" type="text" placeholder="Например: операторы склада" required>
-                </div>
-                <div class="field">
-                  <label for="f-count">Количество сотрудников</label>
-                  <input id="f-count" name="count" type="text" placeholder="Например: 10">
-                </div>
-              </div>
               <div class="field">
-                <label for="f-when">Когда нужен выход</label>
-                <input id="f-when" name="when" type="text" placeholder="Например: в течение месяца">
+                <label for="f-who">Кого нужно нанять</label>
+                <input id="f-who" name="who" type="text" placeholder="Например: операторы склада, 10 человек">
               </div>
               <div class="field">
                 <label for="f-comment">Комментарий</label>
-                <textarea id="f-comment" name="comment" placeholder="График, регион, особые требования"></textarea>
+                <textarea id="f-comment" name="comment" placeholder="Компания, город, сроки, особые требования — что есть"></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-lg btn-block">Получить оценку вакансии</button>
-              <span class="form-note">Без обязательств. Если задача не наша — скажем сразу. Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</span>
+              <span class="form-note">Ответим в течение рабочего дня. Без обязательств: если задача не наша — скажем сразу. Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</span>
             </form>
             <div class="form-success" id="lead-success" hidden>
               <div class="success-icon"><svg width="46" height="46" aria-hidden="true"><use href="#i-check-circle"/></svg></div>
               <h3>Заявка отправлена</h3>
-              <p>Скажем, сколько может стоить закрытие, какие сроки реалистичны и что может помешать выходу кандидата.</p>
+              <p>Ответим в течение рабочего дня: сколько может стоить закрытие, какие сроки реалистичны и что может помешать выходу кандидата.</p>
               <button type="button" class="btn btn-ghost" id="lead-reset">Отправить ещё одну</button>
             </div>
           </div>
